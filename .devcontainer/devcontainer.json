@@ -29,7 +29,8 @@
 				"ritwickdey.LiveServer",
 				"ecmel.vscode-html-css",
 				"mhutchie.git-graph",
-				"dbaeumer.vscode-eslint"
+				"dbaeumer.vscode-eslint",
+				"GitHub.copilot"
 			],
 			"settings": {
 			// "workbench.colorTheme": "Default Dark+",

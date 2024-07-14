@@ -31,15 +31,15 @@ body{
     border: 3px solid white;
     padding: 12px 0px 12px 0px;
     border-radius: 15px;
-    /*  */
     box-shadow: inset 5px 5px 10px rgb(2, 2, 2), inset -5px -5px 10px rgb(6, 6, 6);
+    margin-top: 15px;
 }
 .form{
-    margin-top: 20px;
+    margin-top: auto;
 }
 .form .input{
     width: 88%;
-    background: transparent;
+    background: #f1f1f1;
     border: 2px solid white;
     padding: 15px 20px;
     border-radius: 10px;
@@ -50,11 +50,35 @@ body{
     color: rgb(255, 255, 255);
 }
 .form .input::placeholder{
-    /* color: rgb(255, 255, 255); */
+    color: #7c7c7c;
 }
 .form .input:focus{
     outline: none;
-    /* border-inline: 2px solid #12b1b1; */
+    border-inline: 2px solid #fff;
+}
+.form .input:hover{
+    scale: 1.05;
+    transition: all 0.3s;
+}
+.form .input:active{
+   scale: 0.95;
+   transition: all 0.2s ease-in;
+}
+.container .submit_Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+    cursor: pointer;
+    border: none;
+    gap: 10px;
+    padding: 12px 12px;
+    margin: 25px 0px 0px 35%;
+    border-radius: 12px;
+    width: 32%;
+    background-color: #f1f1f1f1;
+    outline: 3px #f1f1f1 solid;
+    outline-offset: -3px;
 }
 .form .forgot_Password{
     display: block;
@@ -66,39 +90,29 @@ body{
     color: #9372f5;
     text-decoration: none;
 }
-.container .submit_Btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.4s;
-    cursor: pointer;
-    border: none;
-    gap: 10px;
-    padding: 12px 12px;
-    margin: 15px 0px 5px 35%;
-    border-radius: 12px;
-    width: 32%;
-    background-color: #f1f1f1f1;
-    outline: 3px #f1f1f1 solid;
-    outline-offset: -3px;
-}
 .container .submit_Btn .text{
-    color: #000;
+    color: #111;
     font-size: 16px;
     font-weight: 540;
     transition: 0.4s;
 }
-.container .submit_Btn svg path{
-    transition: 0.4s;
-}
 .container .submit_Btn:hover{
     background: transparent;
+    scale: 1.05;
 }
 .container .submit_Btn:hover .text{
     color: white;
+    scale: 1.05;
 }
 .container .submit_Btn:hover svg path{
     fill: white;
+}
+.container .submit_Btn:active{
+    scale: 0.95;
+}
+.container .submit_Btn:active svg{
+    scale: 0.9;
+    transition: all 0.4s;
 }
 .social_Accounts_Container{
     margin-top: 25px;
