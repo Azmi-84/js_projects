@@ -22,27 +22,28 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"esbenp.prettier-vscode",
-				"vscode-icons-team.vscode-icons",
 				"wayou.vscode-todo-highlight",
 				"formulahendry.code-runner",
 				"ritwickdey.LiveServer",
 				"ecmel.vscode-html-css",
 				"mhutchie.git-graph",
 				"dbaeumer.vscode-eslint",
-				"GitHub.copilot"
+				"GitHub.copilot",
+				"teabyii.ayu",
+				"PKief.material-icon-theme"
 			],
 			"settings": {
 			// "workbench.colorTheme": "Default Dark+",
-   				"editor.fontFamily": "'Calibri', 'Fira Sans', 'Courier New', monospace",
-    			"editor.fontSize": 14,
-   				"editor.lineHeight": 22,
-    			"editor.letterSpacing": 0.5,
-				"editor.wordWrap": "on"
+   				"editor.fontFamily": "'Calibri'",
+				"editor.fontSize": 16,
+				"editor.lineHeight": 22,
+				"editor.letterSpacing": 0.1,
+				"editor.wordWrap": "on",
+				"terminal.integrated.fontFamily": "'Courier New', monospace",
+				"terminal.integrated.fontSize": 14,
+				"terminal.integrated.lineHeight": 1.2
 			}
 		}
 	},
 	"postCreateCommand": "sh ./install-fonts.sh && yarn install"
 }
-
-
