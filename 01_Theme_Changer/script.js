@@ -6,6 +6,15 @@ function getRandomColor() {
     const rgb = `rgb(${r}, ${g}, ${b})`;
     const rgba = `rgba(${r}, ${g}, ${b}, ${a})`;
     const hex = `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1).toUpperCase()}`;
+
+    console.log(r);
+    console.log(g);
+    console.log(b);
+    console.log(a);
+    console.log(rgb);
+    console.log(rgba);
+    console.log(hex);
+
     return { rgb, rgba, hex };
 }
 
@@ -23,6 +32,11 @@ function toggleColorInfo(type) {
         const rgb = div.dataset.rgb;
         const rgba = div.dataset.rgba;
         const hex = div.dataset.hex;
+
+        console.log(infoDivs);
+        console.log(rgb);
+        console.log(rgba);
+        console.log(hex);
 
         if (type === "all") {
             div.innerHTML = `RGB: ${rgb}<br>RGBA: ${rgba}<br>HEX: ${hex}`;
@@ -44,9 +58,21 @@ document.getElementById("generateButton").addEventListener("click", function () 
     const colorInfo2 = document.getElementById("color-info2");
     const colorInfo3 = document.getElementById("color-info3");
 
+    console.log(colorBox1);
+    console.log(colorBox2);
+    console.log(colorBox3);
+    console.log(colorInfo1);
+    console.log(colorInfo2);
+    console.log(colorInfo3);
+    
+
     const color1 = getRandomColor();
     const color2 = getRandomColor();
     const color3 = getRandomColor();
+
+    console.log(color1);
+    console.log(color2);
+    console.log(color3);
 
     displayColorInfo(colorBox1, colorInfo1, color1);
     displayColorInfo(colorBox2, colorInfo2, color2);
@@ -65,10 +91,12 @@ document.querySelectorAll(".color-info").forEach(info => {
         tooltip.className = "tooltip";
         tooltip.innerText = "Copy";
         info.appendChild(tooltip);
+
     });
 
     info.addEventListener("mouseout", function () {
         const tooltip = info.querySelector(".tooltip");
+
         if (tooltip) {
             tooltip.remove();
         }
@@ -76,6 +104,7 @@ document.querySelectorAll(".color-info").forEach(info => {
 
     info.addEventListener("click", function () {
         const tooltip = info.querySelector(".tooltip");
+
         navigator.clipboard.writeText(info.innerText).then(() => {
             tooltip.innerText = "Copied!";
             setTimeout(() => {

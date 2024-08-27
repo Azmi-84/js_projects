@@ -9,6 +9,15 @@ body {
     padding: 12px;
     margin: 0;
 }
+.grid {
+    background-image: linear-gradient(to right, #0f0f10 1px, transparent 1px),
+        linear-gradient(to bottom, #0f0f10 1px, transparent 1px);
+    background-size: 1rem 1rem;
+    background-position: center center;
+    position: relative;
+    z-index: -1;
+    filter: blur(0.1px);
+}
 .color-boxes {
     display: flex;
     justify-content: center;
