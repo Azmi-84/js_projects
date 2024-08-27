@@ -1,6 +1,9 @@
 document.getElementById('calculate-btn').addEventListener('click', function() {
     const weight = parseFloat(document.getElementById('weight').value);
     const height = parseFloat(document.getElementById('height').value);
+
+    console.log(weight);
+    console.log(height);
     
     if (isNaN(weight) || isNaN(height)) {
         alert('Please provide valid numbers for weight and height.');
@@ -12,6 +15,11 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     const resultElement = document.getElementById('bmi-result');
     const descriptionElement = document.getElementById('bmi-description');
 
+console.log(heightInMeters);
+console.log(bmi);
+console.log(resultElement);
+console.log(descriptionElement);
+
     resultElement.textContent = `Your BMI: ${bmi}`;
     descriptionElement.textContent = getBMIDescription(bmi);
 });
@@ -22,6 +30,9 @@ document.querySelectorAll('.color-info').forEach(info => {
         tooltip.className = 'tooltip';
         tooltip.innerText = 'Copy';
         info.appendChild(tooltip);
+
+        console.log(tooltip);
+        
     });
 
     info.addEventListener('mouseout', function () {
