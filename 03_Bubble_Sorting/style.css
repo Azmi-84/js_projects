@@ -22,7 +22,6 @@ body {
     0% { background-position: center center; }
     100% { background-position: right bottom; }
 }
-
 .container {
     text-align: center;
     max-width: 400px;
@@ -38,22 +37,15 @@ body {
 h1 {
     margin-bottom: 20px;
     font-size: 28px;
-    background-image: linear-gradient(to right, #541bbe, #0b9d74);
+    background-image: linear-gradient(to right, rgb(193, 112, 14), #037d5b);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: bold;
 }
-
 .input-group {
     margin-bottom: 20px;
 }
-
-.input-wrapper {
-    position: relative;
-    margin-bottom: 15px;
-}
-
 .input {
     background-color: #010201;
     border: 2px solid #343434;
@@ -75,7 +67,6 @@ h1 {
 .input::placeholder {
     color: #c0b0c0;
 }
-
 .tooltip {
     position: absolute;
     top: -150%;
@@ -105,12 +96,11 @@ h1 {
     background: #333333;
 }
 
-.input-wrapper:hover .tooltip {
+.input-wrapper .tooltip {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(-10px);
 }
-
 button {
     background-color: #212121;
     border: none;
@@ -118,7 +108,7 @@ button {
     height: 50px;
     border-radius: 10px;
     font-size: 20px;
-    color: #f9f9f9;
+    color: #b5690c;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -161,12 +151,7 @@ button:hover:before {
 button:hover:after {
     transform: scaleX(1);
 }
-
-.result-container {
-    margin-top: 20px;
-}
-
-.bmi-result{
+.bubble-sorted {
     margin-bottom: 10px;
     font-size: 24px;
     cursor: pointer;
@@ -174,7 +159,7 @@ button:hover:after {
     display: inline-block;
 }
 
-.bmi-result:hover .tooltip {
+.bubble-sorted:hover .tooltip {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(-50%) translateY(-10px);

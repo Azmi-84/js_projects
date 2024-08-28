@@ -5,7 +5,7 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     console.log(weight);
     console.log(height);
     
-    if (isNaN(weight) || isNaN(height)) {
+    if (isNaN(weight) || isNaN(height) || height < 0 || weight < 0 || height === " " || weight === " ") {
         alert('Please provide valid numbers for weight and height.');
         return;
     }
