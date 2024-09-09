@@ -1,8 +1,28 @@
+# Bubble Sorting Solution
+
+This project provides a sorting solution using bubble sorting methods. It detects if the given sequence of numbers is already sorted and offers sorting options when needed.
+
+## Features
+- **Sorting Check**: Determine if numbers are sorted in ascending or descending order.
+- **Sorting Options**: If unsorted, offers a dropdown to select sorting from "lower to upper" or "upper to lower".
+- **Interactive Tooltips**: Provides tooltips for guidance and supports clipboard copying on click.
+
+## Usage Guide
+
+1. **Input Field**: Enter numbers separated by spaces.
+2. **Start Button**: Click to check the sorting status of the input.
+3. **Dropdown Options**: If not sorted, select "lower to upper" or "upper to lower" to sort accordingly.
+4. **Result Section**: Displays sorted numbers and a sorting description.
+
+## Example Code
+
+```javascript
+// JavaScript Code to Start Sorting
 document.getElementById('start-btn').addEventListener('click', function () {
-    const input = document.getElementById('input').value.split(' ').map(Number); 
+    const input = document.getElementById('input').value.split(' ').map(Number);
 
     if (!input.length || input.some(isNaN)) {
-        alert('Please give a valid number.');
+        alert('Please provide a valid number.');
         return;
     }
 
@@ -14,13 +34,13 @@ document.getElementById('start-btn').addEventListener('click', function () {
     } else if (isDescending) {
         displaySorted(input, 'sorted in descending order');
     } else {
-        enableSortingOptions(); 
+        enableSortingOptions();
     }
 });
 
-function displaySorted(arr, descriptions) {
+function displaySorted(arr, description) {
     document.getElementById('bubble-sorted').textContent = arr.join(', ');
-    document.getElementById('bubble-sorted-description').textContent = `The provided number is ${descriptions}`;
+    document.getElementById('bubble-sorted-description').textContent = `The provided numbers are ${description}`;
 }
 
 function enableSortingOptions() {
@@ -45,11 +65,11 @@ document.querySelectorAll('.dropdown-menu').forEach(item => {
 
 document.querySelectorAll('.input').forEach(input => {
     input.addEventListener('focus', () => {
-        input.nextElementSibling.style.opacity = '1'; 
+        input.nextElementSibling.style.opacity = '1';
     });
 
     input.addEventListener('blur', () => {
-        input.nextElementSibling.style.opacity = '0'; 
+        input.nextElementSibling.style.opacity = '0';
     });
 
     input.addEventListener('mouseover', function () {
@@ -62,7 +82,7 @@ document.querySelectorAll('.input').forEach(input => {
     input.addEventListener('mouseout', function () {
         const tooltip = input.querySelector('.tooltip');
         if (tooltip) {
-            tooltip.remove(); 
+            tooltip.remove();
         }
     });
 
@@ -70,9 +90,9 @@ document.querySelectorAll('.input').forEach(input => {
         const tooltip = input.querySelector('.tooltip');
         navigator.clipboard.writeText(input.innerText).then(() => {
             if (tooltip) {
-                tooltip.innerText = 'Copied!'; 
+                tooltip.innerText = 'Copied!';
                 setTimeout(() => {
-                    tooltip.innerText = 'Copy'; 
+                    tooltip.innerText = 'Copy';
                 }, 1000);
             }
         });
